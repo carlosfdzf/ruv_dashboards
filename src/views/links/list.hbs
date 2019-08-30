@@ -1,0 +1,48 @@
+<div class="container p-4">
+    
+    <div class="m-4">
+    <form class="form-inline md-form form-sm mt-0" action="/links/search" method="POST">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75 " type="text" placeholder="Search" aria-label="Search" id="username" name="username">
+        <button class="btn btn-primary aqua-gradient btn-rounded" type="submit">Search</button>
+    </form>
+    </div>
+    
+    <div class="row">
+        {{#each links}}
+            <div class="col-md-3">
+               <div class="card text-center">
+                   <div class="card-body">
+                       <form style="display: inline-block; text-align: center;" class="form-inline md-form form-sm mt-0" action="/links/tablero" method="POST">
+                            <a href="javascript:;" onclick="parentNode.submit();"><h3 class="card-title text-uppercase">
+                                    {{title}}
+                                </h3> </a>
+                            <input type="hidden" name="url" value={{title}}/>
+                        </form><br>
+                       <small>nivel de acceso {{level_dashboards}}</small>
+                       <p class="m-2">{{description}}</p>
+                       <p>{{timeago created_at}}</p>
+                        <form style="display: inline-block; text-align: center;" class="form-inline md-form form-sm mt-0" action="/links/tablero" method="POST">
+                            <a href="javascript:;" class="btn btn-secondary" onclick="parentNode.submit();"> 
+                                ver
+                            </a>
+                            <input type="hidden" name="url" value={{title}}/>
+                        </form>
+                   </div>
+               </div> 
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    
+                    {{#if admin}} 
+                        <a href="/links/add">Crear una nueva tarjeta</a>
+                    {{else}}
+                        <p>Aun no tienes tarjeta disponibles</p>
+
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <img src="img/logo.png" alt="logo RUV" class="card-img mx-auto m-2 rounded-square w-50">   
+                </div>
+                
+                <div class="card-body">
+                    <h3>SignUp</h3>
+                    <form action="/signup" method="POST">
+                        <div class="form-group">
+                          <input type="text" name="name" id="name" class="form-control" placeholder="Nombre" autofocus>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="text" name="surname" id="surname" class="form-control" placeholder="Apellido">
+                        </div>
+
+                        <div class="form-group">
+                          <input type="text" name="username" id="username" class="form-control" placeholder="Nombre de usuario">
+                        </div>
+
+                        <div class="form-group">
+                          <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
+                        </div>
+
+                        <div class="form-group">
+                          <input type="email" name="email" id="email" class="form-control" placeholder="email">
+                        </div>
+
+                        <div class="form-group">
+                          <input type="number" name="phone" id="phone" class="form-control" placeholder="telefono">
+                        </div>
+
+                        <div class="form-group">
+                          <input type="level" name="level_users" id="level_users" class="form-control" placeholder="nivel de acceso (mas bajo 1 hasta 5 mas alto)">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
