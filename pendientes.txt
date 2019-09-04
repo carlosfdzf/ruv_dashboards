@@ -1,0 +1,38 @@
+***acceso dashboards tableau
+https://sso.online.tableau.com/public/idp/SSO
+
+usuario cuenta de prueba tableau
+user: sortav@ruv.org.mx
+pass: Shmn1304!
+
+***acesso servidor heroku 
+https://dashboard.heroku.com/apps/ruv-dashboards
+user: carlos.afdzf@gmail.com
+pass: d3vc0rp0r4t!v0syf
+
+***credenciales base de datos:
+https://www.cleardb.com/dashboard
+user: carlos.afdzf@gmail.com
+pass: d3vc0rp0r4t!v0syf
+
+
+***app heroku
+
+https://ruv-dashboards.herokuapp.com/signin
+usuario adminsitrador
+user: admin
+pass: admin
+
+usuario normal
+user: carlos
+pass: carlos
+
+nota: para crear un usuario nuevo se usa se usa el archivo src/lib/createmainuser.js
+  type - indica el tipo de usuario - "normal" o "admin"
+
+https://ruv-dashboards.herokuapp.com/links
+
+dashboard1 contiene un ejemplo de tablero a la cuenta de tableau, al acceder si no hay una sesion abierta en tableo la api pide autentiacion una vez auntenticado se lleva directamente al tablero
+	- iniciar sesion automaticamente en tableau al acceder en la plataforma https://ruv-dashboards.herokuapp.com/signin
+	- cerrar sesion en tableau al cambiar de pestana fuera de https://ruv-dashboards.herokuapp.com
+	- reiniciar sesion en tablea al recargar https://ruv-dashboards.herokuapp.com
